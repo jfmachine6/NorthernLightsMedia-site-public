@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A timed 3D Pictionary prompt game for Northern Lights Media." />
+    <title>3D Pictionary | Northern Lights Media</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="pictionary.css" />
+    <script type="module" src="../components/navbar.js"></script>
+    <script type="module" src="pictionary.js"></script>
+  </head>
+  <body class="pictionary-body">
+    <header id="site-nav"></header>
+
+    <main class="pictionary-page">
+      <div class="pictionary-layout">
+        <aside class="attendance-panel" aria-labelledby="attendance-title">
+          <img class="attendance-panel__qr" src="../Assets/NLM_gamenight_attendance_qr_9-24.png" alt="QR code for Northern Lights Media game night attendance" />
+          <div>
+            <p class="panel-label">Game night attendance</p>
+            <h2 id="attendance-title">Scan to sign in and join the raffle.</h2>
+          </div>
+        </aside>
+
+        <div class="pictionary-main">
+          <section class="pictionary-heading" aria-labelledby="pictionary-title">
+            <p class="pictionary-kicker">Northern Lights Media</p>
+            <h1 id="pictionary-title">3D Pictionary</h1>
+          </section>
+
+          <section class="game-panel" aria-labelledby="game-panel-title">
+            <div class="game-panel__header">
+              <div>
+                <p class="panel-label">Prompt generator</p>
+                <h2 id="game-panel-title">Ready when you are.</h2>
+              </div>
+              <p class="prompt-count" id="prompt-count" aria-live="polite">Loading prompts...</p>
+            </div>
+
+            <div class="prompt-display" aria-live="polite" aria-atomic="true">
+              <p class="panel-label">Your prompt</p>
+              <p class="prompt-text" id="prompt-text">Press play to begin.</p>
+            </div>
+
+            <div class="timer-row">
+              <div>
+                <p class="panel-label">Round timer</p>
+                <label class="timer-control" for="timer-length">
+                  <input id="timer-length" type="range" min="1" max="15" value="5" step="1" />
+                  <span><output id="timer-length-value">5</output> minutes</span>
+                </label>
+              </div>
+              <time class="timer-display" id="timer-display" datetime="PT5M">05:00</time>
+            </div>
+
+            <div class="game-actions">
+              <button class="game-button game-button--primary" id="play-button" type="button" disabled>Loading prompts...</button>
+              <button class="game-button game-button--secondary" id="reset-button" type="button">Reset prompts</button>
+            </div>
+            <p class="game-status" id="game-status" role="status"></p>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

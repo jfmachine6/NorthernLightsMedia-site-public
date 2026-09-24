@@ -1,0 +1,62 @@
+.pictionary-body .site-nav { height: 140px; }
+.pictionary-body .site-nav__logo { height: 126px; width: 126px; }
+.pictionary-page { margin: 0 auto; max-width: 1180px; padding: 28px clamp(24px, 4vw, 56px) 40px; }
+.pictionary-layout { align-items: start; display: grid; gap: clamp(24px, 4vw, 48px); grid-template-columns: 220px minmax(0, 1fr); }
+.pictionary-heading { margin-bottom: 24px; }
+.pictionary-kicker, .panel-label, .prompt-count, .pictionary-note { color: var(--muted); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.pictionary-kicker { margin: 0 0 20px; }
+.pictionary-heading h1 { color: var(--acid); font-size: clamp(3rem, 8vw, 7.5rem); letter-spacing: -0.08em; line-height: 0.86; margin: 0; }
+.game-panel { background: linear-gradient(135deg, rgba(23, 66, 55, 0.9), rgba(9, 70, 77, 0.86)); border: 1px solid rgba(183, 243, 107, 0.28); border-radius: 18px; box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24); padding: clamp(24px, 3vw, 36px); }
+.game-panel__header, .timer-row { align-items: start; display: flex; justify-content: space-between; gap: 32px; }
+.panel-label { margin: 0 0 12px; }
+.game-panel h2 { font-size: clamp(1.5rem, 3vw, 2.8rem); letter-spacing: -0.05em; margin: 0; }
+.prompt-count { margin: 4px 0 0; text-align: right; }
+.prompt-display { border-bottom: 1px solid var(--line); border-top: 1px solid var(--line); margin: 28px 0; padding: 20px 0 24px; }
+.prompt-text { color: var(--acid); font-size: clamp(2rem, 4vw, 4rem); letter-spacing: -0.06em; line-height: 0.95; margin: 0; max-width: 850px; }
+.timer-row { align-items: end; }
+.timer-control { align-items: center; display: flex; gap: 16px; }
+.timer-control input { accent-color: var(--acid); cursor: pointer; width: min(360px, 48vw); }
+.timer-control span { color: var(--paper); font-family: var(--mono); font-size: 0.78rem; white-space: nowrap; }
+.timer-control output { color: var(--acid); }
+.timer-display { color: var(--paper); font-family: var(--mono); font-size: clamp(2.2rem, 6vw, 5rem); letter-spacing: -0.08em; line-height: 0.8; }
+.timer-display.is-overtime { color: #ffca75; }
+.game-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.game-button { border: 1px solid transparent; border-radius: 100px; cursor: pointer; font: 600 0.95rem var(--display); padding: 15px 22px; transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease; }
+.game-button:hover:not(:disabled), .game-button:focus-visible:not(:disabled) { transform: translateY(-2px); }
+.game-button--primary { background: var(--acid); color: var(--ink); min-width: 126px; }
+.game-button--secondary { background: transparent; border-color: rgba(232, 240, 232, 0.38); color: var(--paper); }
+.game-button--secondary:hover, .game-button--secondary:focus-visible { border-color: var(--acid); color: var(--acid); }
+.game-button:disabled { cursor: not-allowed; opacity: 0.55; }
+.game-status { color: #ffca75; font-family: var(--mono); font-size: 0.75rem; min-height: 1.2em; }
+.attendance-panel { align-items: start; background: #f5fbf5; border: 1px solid rgba(183, 243, 107, 0.55); border-radius: 18px; color: var(--ink); display: flex; flex: 0 0 230px; flex-direction: column; gap: 14px; padding: 14px; }
+.attendance-panel__qr { background: #fff; display: block; height: 200px; object-fit: contain; padding: 8px; width: 200px; }
+.attendance-panel .panel-label { color: var(--green); }
+.attendance-panel h2 { font-size: 1.35rem; letter-spacing: -0.05em; line-height: 1; margin: 0; }
+.pictionary-note { margin: 22px 0 0; }
+.pictionary-note code { color: var(--acid); font-family: var(--mono); text-transform: none; }
+@media (max-width: 720px) {
+  .pictionary-body .site-nav { height: 142px; }
+  .pictionary-body .site-nav__logo { height: 128px; width: 128px; }
+  .pictionary-page { padding-top: 34px; }
+  .pictionary-layout { display: block; }
+  .pictionary-heading { margin-bottom: 36px; }
+  .game-panel__header, .timer-row { display: block; }
+  .prompt-count { margin-top: 22px; text-align: left; }
+  .timer-display { display: block; margin-top: 30px; }
+  .timer-control input { width: min(100%, 280px); }
+  .attendance-panel { align-items: start; display: grid; flex: none; grid-template-columns: minmax(120px, 1fr) 1fr; margin-bottom: 30px; }
+  .attendance-panel__qr { height: min(36vw, 180px); width: min(36vw, 180px); }
+}
+@media (min-width: 721px) and (max-height: 800px) {
+  .pictionary-body .site-nav { height: 110px; }
+  .pictionary-body .site-nav__logo { height: 98px; width: 98px; }
+  .pictionary-page { padding-bottom: 18px; padding-top: 18px; }
+  .pictionary-layout { gap: 28px; }
+  .pictionary-heading { margin-bottom: 14px; padding-top: 0; }
+  .pictionary-heading h1 { font-size: clamp(2.8rem, 5vw, 5rem); }
+  .game-panel { padding: 22px 28px; }
+  .prompt-display { margin: 18px 0 20px; padding: 16px 0 18px; }
+  .prompt-text { font-size: clamp(1.8rem, 3.5vw, 3.4rem); }
+  .game-actions { margin-top: 22px; }
+  .timer-display { font-size: clamp(2rem, 5vw, 4rem); }
+}
