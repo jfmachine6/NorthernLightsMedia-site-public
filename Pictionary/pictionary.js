@@ -42,18 +42,13 @@ function parseCsvLine(line) {
   return fields;
 }
 
-function parsePrompts(csvText) {
-  const rows = csvText.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).map(parseCsvLine);
+function parsePrompts(promptTextContent) {
+  const rows = promptTextContent.split(/\r?\n/).map((line) => line.trim()).filter(Boolean).flatMap(parseCsvLine);
   if (rows.length === 0) {
     return [];
   }
 
-  const header = rows[0].map((value) => value.toLowerCase());
-  const promptColumn = header.findIndex((value) => ["prompt", "prompts", "word", "words"].includes(value));
-  const startRow = promptColumn >= 0 ? 1 : 0;
-  const column = promptColumn >= 0 ? promptColumn : 0;
-
-  return rows.slice(startRow).map((row) => row[column]).filter(Boolean);
+  return rows.filter(Boolean);
 }
 
 function updatePromptCount() {
@@ -155,7 +150,7 @@ resetButton.addEventListener("click", resetGame);
 
 async function loadPrompts() {
   try {
-    const response = await fetch("prompts.csv");
+    const response = await fetch("pictionaryPrompts.txt");
     if (!response.ok) {
       throw new Error(`Prompt file returned ${response.status}`);
     }
@@ -169,7 +164,7 @@ async function loadPrompts() {
   } catch (error) {
     promptCount.textContent = "No prompts loaded";
     playButton.textContent = "No prompts loaded";
-    gameStatus.textContent = "Add prompts to Pictionary/prompts.csv, then reload this page.";
+    gameStatus.textContent = "Add prompts to Pictionary/pictionaryPrompts.txt, then reload this page.";
     console.error(error);
   }
 }
