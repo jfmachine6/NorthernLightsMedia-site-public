@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore Northern Lights Media events for Fall 2026 at NKU." />
+    <title>Semester Calendar | Northern Lights Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="Assets/NL_Iso_B.png" />
+    <link rel="stylesheet" href="styles.css?v=logo-glow" />
+    <link rel="stylesheet" href="calendar.css" />
+    <script type="module" src="components/navbar.js"></script>
+    <script type="module" src="components/calendar.js"></script>
+  </head>
+  <body>
+    <header id="site-nav"></header>
+    <main class="events-page">
+      <header class="events-heading">
+        <div><p class="events-eyebrow">Northern Lights Media / Fall 2026</p><h1>Semester Calendar</h1></div>
+        <div class="view-switch" role="group" aria-label="Calendar view">
+          <button type="button" data-view="calendar" aria-pressed="false">Calendar</button>
+          <button type="button" data-view="agenda" aria-pressed="true">Agenda</button>
+        </div>
+      </header>
+      <p class="events-note">Planned events are subject to change. All dates and times are local to NKU.</p>
+      <div id="semester-calendar" class="semester-calendar" hidden></div>
+      <div id="semester-agenda" class="semester-agenda"></div>
+      <noscript><p>Enable JavaScript to view the semester calendar and event details.</p></noscript>
+    </main>
+  </body>
+</html>

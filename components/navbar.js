@@ -2,6 +2,7 @@ const isPictionaryPage = window.location.pathname.toLowerCase().includes("/picti
 const homePrefix = isPictionaryPage ? "../" : "";
 const navItems = [
   { label: "About", href: `${homePrefix}index.html#about` },
+  { label: "Calendar", href: `${homePrefix}calendar.html` },
   { label: "3D Pictionary", href: `${homePrefix}Pictionary/index.html` },
 ];
 
@@ -9,7 +10,7 @@ function renderNavbar(container) {
   container.innerHTML = `
     <nav class="site-nav" aria-label="Main navigation">
       <a class="site-nav__logo" href="${homePrefix}index.html" aria-label="Northern Lights Media home">
-        <img src="${homePrefix}Assets/NLM_Logo_A_Bordered.png" alt="Northern Lights Media" />
+        <img src="${homePrefix}Assets/NL_Iso_B.png" alt="Northern Lights Media" />
       </a>
       <button class="site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-menu">
         <span class="sr-only">Toggle navigation</span>
