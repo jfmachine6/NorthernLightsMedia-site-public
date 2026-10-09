@@ -27,5 +27,6 @@ export function statusLabel(event) {
 
 export function eventLink(event) {
   if (event.id === "halloween-awards") return "monster-mesh.html";
+  if (event.id === "bob-ross-night") return "bob-ross-night.html";
   return `event.html?id=${encodeURIComponent(event.id)}`;
 }

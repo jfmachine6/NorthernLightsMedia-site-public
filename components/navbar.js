@@ -3,6 +3,7 @@ const homePrefix = isPictionaryPage ? "../" : "";
 const navItems = [
   { label: "About", href: `${homePrefix}index.html#about` },
   { label: "Calendar", href: `${homePrefix}calendar.html` },
+  { label: "Showcase", href: `${homePrefix}showcase.html` },
   { label: "3D Pictionary", href: `${homePrefix}Pictionary/index.html` },
 ];
 

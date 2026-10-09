@@ -50,6 +50,18 @@
 .monster-mesh__coming p { color: var(--muted); line-height: 1.6; margin: 0; }
 .wip-banner { background: #f1c75b; color: #18211f; font-family: var(--mono); font-size: 0.8rem; font-weight: 500; padding: 12px 20px; text-align: center; }
 .wip-disclaimer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-top: 40px; padding-top: 20px; }
+.bob-ross-heading { border-bottom: 1px solid var(--line); padding-bottom: 30px; }
+.bob-ross-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+.bob-ross-intro { color: var(--muted); font-size: 1.1rem; line-height: 1.65; margin: 18px 0 0; max-width: 760px; }
+.bob-ross-facts { border-bottom: 1px solid var(--line); display: grid; gap: 26px; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 42px; padding: 24px 0; }
+.bob-ross-gallery { display: grid; gap: clamp(20px, 3vw, 40px); grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.bob-ross-artwork { margin: 0; min-width: 0; }
+.bob-ross-artwork a { background: linear-gradient(#18211f, #18211f) padding-box, linear-gradient(110deg, #64d9ff, #5ef7d7 38%, #b7f36b 72%, #64d9ff) border-box; border: 1px solid transparent; border-radius: 4px; display: block; overflow: hidden; transition: box-shadow 200ms ease; -webkit-user-drag: none; user-select: none; }
+.bob-ross-artwork a:hover, .bob-ross-artwork a:focus-visible { box-shadow: 0 0 12px rgba(94, 247, 215, 0.48), 0 0 26px rgba(100, 217, 255, 0.28); }
+.bob-ross-artwork img { aspect-ratio: 4 / 3; display: block; height: auto; object-fit: contain; transition: transform 220ms ease; width: 100%; }
+.bob-ross-artwork a:hover img, .bob-ross-artwork a:focus-visible img { transform: scale(1.025); }
+.bob-ross-artwork figcaption { align-items: baseline; color: var(--paper); display: flex; font-size: 0.95rem; gap: 12px; justify-content: space-between; padding-top: 10px; }
+.bob-ross-artwork figcaption span:last-child { color: var(--muted); font-family: var(--mono); font-size: 0.68rem; text-align: right; }
 .events-page :focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
 [hidden] { display: none !important; }
 @media (max-width: 600px) {
@@ -59,4 +71,10 @@
   .event-detail__body { gap: 32px; grid-template-columns: 1fr; }
   .monster-mesh__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .monster-mesh__sections { gap: 28px; grid-template-columns: 1fr; }
+  .bob-ross-facts { gap: 18px; grid-template-columns: 1fr; }
+  .bob-ross-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bob-ross-artwork figcaption { align-items: flex-start; flex-direction: column; gap: 3px; }
+}
+@media (max-width: 420px) {
+  .bob-ross-gallery { grid-template-columns: 1fr; }
 }
