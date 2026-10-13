@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="description" content="Unlisted WIP draft and marketing toolkit for The Griffin Hall Haunting: DFX Halloween Festival." />
+    <title>WIP Agenda &amp; Marketing | The Griffin Hall Haunting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="Assets/NL_Iso_B.png" />
+    <link rel="stylesheet" href="styles.css?v=logo-glow" />
+    <link rel="stylesheet" href="calendar.css?v=festival-wip" />
+    <script type="module" src="components/navbar.js?v=showcase-link"></script>
+    <style>
+      .festival-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line);
+        border-left: 4px solid var(--acid);
+        border-radius: 6px;
+        padding: clamp(20px, 3vw, 32px);
+        margin-bottom: 24px;
+        transition: transform 180ms ease, border-color 180ms ease;
+      }
+      .festival-card:hover {
+        border-left-color: #64d9ff;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .festival-card__date {
+        color: #64d9ff;
+        font-family: var(--mono);
+        font-size: 0.85rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin: 0 0 8px;
+      }
+      .festival-card h2 {
+        font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+        margin: 0 0 12px;
+        color: var(--paper);
+      }
+      .festival-card p {
+        color: var(--muted);
+        line-height: 1.65;
+        margin: 0 0 16px;
+      }
+      .festival-card__badge {
+        display: inline-block;
+        background: rgba(183, 243, 107, 0.12);
+        color: var(--acid);
+        font-family: var(--mono);
+        font-size: 0.8rem;
+        padding: 5px 12px;
+        border-radius: 4px;
+        margin-right: 10px;
+        margin-bottom: 8px;
+      }
+      .toolkit-box {
+        background: #0d1514;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 24px;
+        margin-top: 36px;
+      }
+      .toolkit-box h2 {
+        color: var(--acid);
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+      .code-snippet {
+        background: #060c0b;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 4px;
+        color: #d4eee0;
+        font-family: var(--mono);
+        font-size: 0.85rem;
+        line-height: 1.5;
+        padding: 16px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+      }
+      .copy-btn {
+        background: var(--acid);
+        border: 0;
+        border-radius: 4px;
+        color: var(--ink);
+        cursor: pointer;
+        font-family: var(--display);
+        font-weight: 600;
+        padding: 8px 16px;
+        margin-bottom: 12px;
+        transition: opacity 160ms ease;
+      }
+      .copy-btn:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wip-banner">WIP · THE GRIFFIN HALL HAUNTING · FESTIVAL AGENDA &amp; MARKETING TOOLKIT</div>
+    <header id="site-nav"></header>
+    <main class="events-page">
+      <a class="calendar-back" href="calendar.html">&larr; Fall 2026 calendar</a>
+      <article class="event-detail" aria-labelledby="festival-title">
+        <header>
+          <p class="events-eyebrow">Northern Lights Media presents</p>
+          <span class="event-status event-status--ready">Event Series Agenda</span>
+          <h1 id="festival-title">The Griffin Hall Haunting</h1>
+          <p class="event-detail__subtitle">DFX Halloween Festival</p>
+        </header>
+
+        <p class="monster-mesh__intro">A two-week Halloween creative festival uniting game makers, 3D sculptors, and digital artists across Northern Kentucky University. Spooky and fun DFX events leading up to Halloween!</p>
+
+        <!-- EVENT 1: SCREAM JAM -->
+        <section class="festival-card">
+          <p class="festival-card__date">Kickoff: Friday, October 16, 2026</p>
+          <h2>😱 Friday, 10/16 | Scream Jam 2026 🎮</h2>
+          <p>Week-long game jam starting Oct. 16th. Join <strong>Northern Lights Media</strong> and the <strong>Game Developers Guild</strong> and work with your friends or by yourself to create a spooky video game in 7 days. Submissions due Oct. 23rd; hosted on itch.io.</p>
+          <div>
+            <span class="festival-card__badge">📍 DFX Lab GH 231</span>
+            <span class="festival-card__badge">⏰ 10/16 at 6:00 PM Kickoff</span>
+            <span class="festival-card__badge">🌐 Hosted on itch.io</span>
+          </div>
+          <div style="margin-top: 14px;">
+            <a href="scream-jam.html" style="color: var(--acid); text-decoration: underline; font-weight: 600;">View dedicated Scream Jam page &rarr;</a>
+          </div>
+        </section>
+
+        <!-- EVENT 2: DIGITAL PUMPKIN CARVING -->
+        <section class="festival-card">
+          <p class="festival-card__date">Workshop: Thursday, October 22, 2026</p>
+          <h2>🎃 Thursday, 10/22 | Digital Pumpkin Carving &amp; Halloween Modeling 💀</h2>
+          <p>Stop by the DFX lab for <strong>Northern Lights Media</strong>'s Digital Pumpkin Carving night where we'll have a guided workshop to digitally carve a Jack'o'Lantern to be 3D printed at the Stego Studio. Also feel free to stop by and model anything Halloween related, you never know when there might be a Halloween-themed DFX contest to submit something for...</p>
+          <div>
+            <span class="festival-card__badge">📍 DFX Lab GH 231</span>
+            <span class="festival-card__badge">⏰ 10/22 from 6:15 PM &ndash; 7:15 PM</span>
+            <span class="festival-card__badge">🖨️ Stego Studio 3D Prints</span>
+          </div>
+        </section>
+
+        <!-- EVENT 3: THE MONSTER MESH -->
+        <section class="festival-card">
+          <p class="festival-card__date">Finale &amp; Party: Thursday, October 29, 2026</p>
+          <h2>🧟 Thursday, 10/29 | The Monster MESH 🪩</h2>
+          <p><em>13</em> days after the start of The Griffin Hall Haunting, the bell tolls for <strong>The Monster MESH</strong>, NLM's first-ever DFX Halloween Contest. Submit Halloween-themed DFX pieces by Sunday, 10/25, and a council of <em>GHOULISH</em> 👻 judges may deem you worthy of an award, given out at The Monster MESH party/game night on Thursday.</p>
+          <div>
+            <span class="festival-card__badge">📍 DFX Lab GH 231</span>
+            <span class="festival-card__badge">⏰ 10/29 from 6:15 PM &ndash; 9:00 PM</span>
+            <span class="festival-card__badge">🏆 Submissions due Sun, 10/25</span>
+          </div>
+          <div style="margin-top: 14px; display: flex; gap: 18px; flex-wrap: wrap;">
+            <a href="monster-mesh.html" style="color: var(--acid); text-decoration: underline; font-weight: 600;">Public Monster Mesh page &rarr;</a>
+            <a href="monster-mesh-wip.html" style="color: #64d9ff; text-decoration: underline; font-weight: 600;">Internal Contest Draft &rarr;</a>
+          </div>
+        </section>
+
+        <!-- MARKETING TOOLKIT -->
+        <section class="toolkit-box" aria-labelledby="toolkit-title">
+          <h2 id="toolkit-title">📣 Marketing Toolkit for Officers</h2>
+          <p style="color: var(--muted); margin-bottom: 20px;">Use the copyable text below for Discord announcements, Canvas posts, email blasts, and social media flyers.</p>
+
+          <h3 style="color: var(--paper); font-size: 1.1rem; margin-bottom: 8px;">Discord Announcement Copy</h3>
+          <button type="button" class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('discord-copy').innerText); this.innerText = 'Copied!'; setTimeout(() => this.innerText = 'Copy Discord Text', 2000);">Copy Discord Text</button>
+          <div id="discord-copy" class="code-snippet">## Northern Lights Media presents 
+# __The Griffin Hall Haunting__
+### *DFX Halloween Festival*
+-# Spooky and fun DFX events leading up to Halloween
+##  - :scream:  Friday, 10/16 | Scream Jam 2026 :video_game: 
+Week long game jam starting Oct. 16th. Join **__Northern Lights Media__** and the **__Game Developers Guild__** and work with your friends or by yourself to create a spooky video game in 7 days. Submissions due Oct. 23rd; hosted on itch.io.
+__10/16 at 6:00pm | DFX Lab GH 231__
+##  - :jack_o_lantern:  Thursday, 10/22 | Digital Pumpkin Carving & Halloween Modeling :skull: 
+Stop by the DFX lab for **__Northern Lights Media__**'s Digital Pumpkin Carving night where we'll have a guided workshop to digitally carve a Jack'o'Lantern to be 3D printed at the Stego Studio. Also feel free to stop by and model anything Halloween related, you never know when there might be a Halloween themed DFX contest to submit something for...
+__10/22 at 6:15pm - 7:15pm | DFX Lab GH 231__
+##  - :man_zombie:  Thursday, 10/29 | The Monster MESH :mirror_ball: 
+*13* days after the start of The Griffin Hall Haunting, the bell tolls for **The Monster MESH**, NLM's first ever DFX Halloween Contest. Submit Halloween themed DFX pieces by Sunday, 10/25, and a council of *GHOULISH* :ghost:  judges may deem you worthy of an award, given out at The Monster MESH party/game night on Thursday:
+__10/29 from 6:15pm - 9:00pm | DFX Lab GH 231__
+*Full contest details coming soon on our website:*
+https://northernlightsmedia.club/</div>
+
+          <h3 style="color: var(--paper); font-size: 1.1rem; margin: 24px 0 8px;">Short Social / Instagram Caption</h3>
+          <div class="code-snippet">🎃 Northern Lights Media presents: THE GRIFFIN HALL HAUNTING 👻
+Join us in GH 231 for two weeks of spooky creative events:
+🎮 10/16 @ 6 PM: Scream Jam 2026 Kickoff (with Game Developers Guild)
+🎃 10/22 @ 6:15 PM: Digital Pumpkin Carving (3D printed at Stego Studio!)
+🏆 10/29 @ 6:15 PM: The Monster MESH Contest Awards &amp; Game Night (Submissions due 10/25)
+Open to all NKU students! More info at northernlightsmedia.club</div>
+        </section>
+
+        <p class="wip-disclaimer">This is an unlisted internal WIP draft created for event planning and marketing asset coordination. Not indexed in public search engines.</p>
+      </article>
+    </main>
+  </body>
+</html>

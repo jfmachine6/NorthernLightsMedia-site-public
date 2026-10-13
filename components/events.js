@@ -7,7 +7,8 @@ export const events = [
   { id: "bob-ross-night", date: "2026-10-08", title: "Bob Ross Night", status: "Ready", description: "Follow along with a Bob Ross video in your software of choice. Led by Sadie, with some snacks provided.", ...standardClubMeeting },
   { id: "emb-professor-film-screening", date: "2026-10-09", title: "EMB Professor Film Screening", status: "Ready", description: "A film produced by EMB professors is being screened in the Digitorium.", location: "Griffin Hall Digitorium" },
   { id: "tutoring-night", date: "2026-10-15", title: "Tutoring Night", status: "Ready", description: "Bring your projects and get help before the big deadline.", ...standardClubMeeting },
-  { id: "digital-pumpkin-carving", date: "2026-10-22", title: "Digital Pumpkin Carving & Halloween Modeling", status: "Planned", description: "Join Sadie for digital pumpkin carving using a prepared pumpkin model, with sculpting and modeling guidance available. You can also create your own Halloween-themed model. Suitable creations can be 3D printed at the campus Stego Lab with Sadie's help.", ...standardClubMeeting },
+  { id: "scream-jam-2026", date: "2026-10-16", title: "Scream Jam 2026", status: "Ready", description: "Week-long spooky game jam co-hosted by Northern Lights Media and the Game Developers Guild. Kickoff in the DFX Lab, submissions due Oct. 23 on itch.io.", time: "6:00 PM Kickoff", location: "Griffin Hall 231 (The DFX Lab)" },
+  { id: "digital-pumpkin-carving", date: "2026-10-22", title: "Digital Pumpkin Carving & Halloween Modeling", status: "Planned", description: "Join Sadie for digital pumpkin carving using a prepared pumpkin model, with sculpting and modeling guidance available. You can also create your own Halloween-themed model. Suitable creations can be 3D printed at the campus Stego Lab with Sadie's help.", location: "Griffin Hall 231 (The DFX Lab)", time: "6:15 PM - 7:15 PM", isClubMeeting: true },
   { id: "halloween-awards", date: "2026-10-29", title: "The Monster Mesh", calendarTitle: "The Monster Mesh: Awards and Game Night", subtitle: "Northern Lights Media Halloween DFX Contest", status: "Planned", description: "Celebrate The Monster Mesh award recipients and see the submissions, then settle in for a relaxed game and movie night.", ...standardClubMeeting, time: "6:15 PM - 9:00 PM" },
   { id: "animated-film-interest", date: "2026-11-05", title: "Animated Short Film Interest Meeting", status: "Planned", description: "Learn about an animated short film project planned for production in the spring semester. Hear the rough schedule and apply to join the production team. Return on December 3 to pitch your film ideas.", ...standardClubMeeting },
   { id: "guest-lecture", date: "2026-11-12", title: "Guest Lecture", status: "Planned", description: "A guest lecture featuring a speaker from the DFX industry. Speaker details will be announced.", ...standardClubMeeting },
@@ -28,5 +29,6 @@ export function statusLabel(event) {
 export function eventLink(event) {
   if (event.id === "halloween-awards") return "monster-mesh.html";
   if (event.id === "bob-ross-night") return "bob-ross-night.html";
+  if (event.id === "scream-jam-2026") return "scream-jam.html";
   return `event.html?id=${encodeURIComponent(event.id)}`;
 }
