@@ -9,6 +9,20 @@ function eventBadge(event) {
   return `<span class="event-status event-status--${event.status.toLowerCase()}">${statusLabel(event)}</span>`;
 }
 
+function calendarEventMarkup(event) {
+  const festivalGroup = event.festivalId
+    ? `<a class="calendar-event-series" href="griffin-hall-haunting.html">The Griffin Hall Haunting</a>`
+    : "";
+  return `<div class="calendar-event-wrap${event.festivalId ? " calendar-event-wrap--festival" : ""}">${festivalGroup}<a class="calendar-event" href="${eventLink(event)}">${eventBadge(event)}<span>${event.calendarTitle || event.title}</span></a></div>`;
+}
+
+function agendaEventMarkup(event) {
+  const festivalGroup = event.festivalId
+    ? `<a class="agenda-event-series" href="griffin-hall-haunting.html">Part of The Griffin Hall Haunting <span aria-hidden="true">&rarr;</span></a>`
+    : "";
+  return `<div class="agenda-event-wrap${event.festivalId ? " agenda-event-wrap--festival" : ""}">${festivalGroup}<a class="agenda-event" href="${eventLink(event)}"><time datetime="${event.date}">${eventDate(event).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}</time><div><h3>${event.calendarTitle || event.title}</h3><p>${event.status === "Canceled" ? "University closed for the holiday" : `${event.time || "Time to be announced"} / ${event.location || "Location to be announced"}`}</p></div>${eventBadge(event)}</a></div>`;
+}
+
 if (calendar) {
   calendar.innerHTML = semester.months.map((month) => {
     const firstDay = new Date(semester.year, month, 1);
@@ -18,7 +32,7 @@ if (calendar) {
     for (let day = 1; day <= days; day += 1) {
       const date = `${semester.year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
       const dayEvents = events.filter((event) => event.date === date);
-      cells.push(`<div class="calendar-day${date === today ? " calendar-day--today" : ""}"><time datetime="${date}" aria-label="${monthName} ${day}, ${semester.year}${date === today ? ", today" : ""}"${date === today ? ' aria-current="date"' : ""}>${day}</time>${dayEvents.map((event) => `<a class="calendar-event" href="${eventLink(event)}">${eventBadge(event)}<span>${event.calendarTitle || event.title}</span></a>`).join("")}</div>`);
+      cells.push(`<div class="calendar-day${date === today ? " calendar-day--today" : ""}"><time datetime="${date}" aria-label="${monthName} ${day}, ${semester.year}${date === today ? ", today" : ""}"${date === today ? ' aria-current="date"' : ""}>${day}</time>${dayEvents.map(calendarEventMarkup).join("")}</div>`);
     }
     while (cells.length < 42) cells.push('<div class="calendar-day calendar-day--empty" aria-hidden="true"></div>');
     return `<section class="calendar-month" aria-labelledby="month-${month}"><h2 id="month-${month}">${monthName} <span>${semester.year}</span></h2><div class="calendar-weekdays" aria-hidden="true">${["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => `<span>${day}</span>`).join("")}</div><div class="calendar-grid">${cells.join("")}</div></section>`;
@@ -27,7 +41,7 @@ if (calendar) {
   agenda.innerHTML = semester.months.map((month) => {
     const monthEvents = events.filter((event) => eventDate(event).getMonth() === month);
     const monthName = new Date(semester.year, month, 1).toLocaleDateString("en-US", { month: "long" });
-    return `<section class="agenda-month"><h2>${monthName}</h2>${monthEvents.map((event) => `<a class="agenda-event" href="${eventLink(event)}"><time datetime="${event.date}">${eventDate(event).toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" })}</time><div><h3>${event.calendarTitle || event.title}</h3><p>${event.status === "Canceled" ? "University closed for the holiday" : `${event.time || "Time to be announced"} / ${event.location || "Location to be announced"}`}</p></div>${eventBadge(event)}</a>`).join("")}</section>`;
+    return `<section class="agenda-month"><h2>${monthName}</h2>${monthEvents.map(agendaEventMarkup).join("")}</section>`;
   }).join("");
 
   document.querySelectorAll("[data-view]").forEach((button) => {

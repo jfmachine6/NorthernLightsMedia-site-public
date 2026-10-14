@@ -19,6 +19,11 @@
 .calendar-day--empty { background: rgba(0, 0, 0, 0.12); }
 .calendar-event { background: rgba(100, 217, 255, 0.07); border-left: 2px solid #64d9ff; display: flex; flex-direction: column; font-size: 0.9rem; gap: 6px; line-height: 1.35; overflow-wrap: anywhere; padding: 8px 6px; }
 .calendar-event:hover, .agenda-event:hover { background: rgba(100, 217, 255, 0.15); }
+.calendar-event-wrap { margin-bottom: 6px; }
+.calendar-event-wrap--festival { background: rgba(183, 243, 107, 0.06); border-left: 2px solid var(--acid); padding: 4px; }
+.calendar-event-series { color: var(--acid); display: block; font: 500 0.55rem/1.3 var(--mono); padding: 2px 3px 4px; text-decoration: none; }
+.calendar-event-series:hover, .calendar-event-series:focus-visible { text-decoration: underline; text-underline-offset: 2px; }
+.calendar-event-wrap--festival .calendar-event { background: transparent; border-left: 0; padding: 4px 3px; }
 .event-status { color: var(--acid); display: inline-block; font-family: var(--mono); font-size: 0.7rem; line-height: 1.4; }
 .calendar-event .event-status { font-size: 0.6rem; }
 .event-status--planned { color: #ffd38c; }
@@ -26,6 +31,11 @@
 .event-status--canceled { color: #ffb1ad; }
 .semester-agenda { display: grid; gap: 40px; }
 .agenda-event { align-items: center; border-top: 1px solid var(--line); display: grid; gap: 24px; grid-template-columns: 120px minmax(0, 1fr) 90px; padding: 20px 0; }
+.agenda-event-wrap--festival { background: linear-gradient(90deg, rgba(183, 243, 107, 0.06), transparent 74%); border-left: 3px solid var(--acid); margin: 8px 0; padding: 0 16px; }
+.agenda-event-wrap--festival .agenda-event { border-top: 1px solid rgba(183, 243, 107, 0.18); }
+.agenda-event-series { color: var(--acid); display: inline-block; font: 500 0.68rem var(--mono); padding-top: 12px; text-decoration: none; text-transform: uppercase; }
+.agenda-event-series:hover, .agenda-event-series:focus-visible { color: #8cf7ed; text-decoration: underline; text-underline-offset: 3px; }
+.agenda-event-series span { margin-left: 8px; }
 .agenda-event > time { color: #64d9ff; font-family: var(--mono); font-size: 0.85rem; }
 .agenda-event h3 { font-size: 1.2rem; margin: 0 0 6px; }
 .agenda-event p { color: var(--muted); font-size: 0.9rem; line-height: 1.5; margin: 0; }
@@ -34,6 +44,8 @@
 .event-detail header { border-bottom: 1px solid var(--line); padding-bottom: 32px; }
 .event-detail h1 { margin-top: 16px; max-width: 900px; }
 .event-detail__subtitle { color: #64d9ff; font-size: clamp(1.1rem, 2.2vw, 1.5rem); line-height: 1.4; margin: 10px 0 0; max-width: 900px; }
+.event-series-link { color: inherit; text-decoration-color: rgba(100, 217, 255, 0.55); text-underline-offset: 4px; }
+.event-series-link:hover, .event-series-link:focus-visible { color: var(--acid); text-decoration-color: currentColor; }
 .event-detail__body { display: grid; gap: 64px; grid-template-columns: minmax(0, 1fr) minmax(240px, 0.6fr); padding-top: 40px; }
 .event-detail h2 { font-size: 1.25rem; margin: 0 0 16px; }
 .event-detail__body p { color: var(--muted); line-height: 1.75; margin-top: 0; }
@@ -48,6 +60,23 @@
 .monster-mesh__coming { background: rgba(100, 217, 255, 0.07); border-left: 3px solid #64d9ff; margin-top: 36px; padding: 22px 24px; }
 .monster-mesh__coming h2 { margin: 0 0 8px; }
 .monster-mesh__coming p { color: var(--muted); line-height: 1.6; margin: 0; }
+.contest-awards { display: grid; gap: 14px; list-style: none; margin: 0; padding: 0; }
+.contest-awards li { border-left: 2px solid var(--acid); display: grid; gap: 3px; padding-left: 12px; }
+.contest-awards strong { color: var(--paper); }
+.contest-awards span { color: var(--muted); font-size: 0.9rem; }
+.festival-timeline { list-style: none; margin: 44px 0 0; padding: 0; }
+.festival-timeline__item { display: grid; gap: clamp(18px, 3vw, 36px); grid-template-columns: 72px minmax(0, 1fr); padding-bottom: 22px; position: relative; }
+.festival-timeline__item:not(:last-child)::before { background: linear-gradient(var(--acid), #087c83); bottom: -2px; content: ""; left: 34px; position: absolute; top: 64px; width: 2px; }
+.festival-timeline__date { align-items: center; background: #122724; border: 1px solid rgba(183, 243, 107, 0.65); border-radius: 50%; color: var(--acid); display: flex; flex-direction: column; height: 70px; justify-content: center; position: relative; width: 70px; z-index: 1; }
+.festival-timeline__date span { font: 500 0.58rem var(--mono); }
+.festival-timeline__date strong { font-size: 1.6rem; line-height: 1; }
+.festival-event { background: linear-gradient(110deg, rgba(100, 217, 255, 0.07), rgba(183, 243, 107, 0.035)); border: 1px solid rgba(232, 240, 232, 0.16); border-left: 3px solid #64d9ff; border-radius: 6px; color: inherit; display: block; padding: clamp(18px, 3vw, 28px); text-decoration: none; transition: border-color 180ms ease, background 180ms ease, transform 180ms ease; }
+.festival-event:hover, .festival-event:focus-visible { background: linear-gradient(110deg, rgba(100, 217, 255, 0.11), rgba(183, 243, 107, 0.06)); border-left-color: var(--acid); transform: translateX(3px); }
+.festival-event__type { color: var(--acid) !important; font: 500 0.72rem var(--mono); margin: 0 0 9px !important; text-transform: uppercase; }
+.festival-event h2 { font-size: clamp(1.25rem, 2.2vw, 1.75rem); margin: 0 0 10px; }
+.festival-event > p:not(.festival-event__type) { color: var(--muted); line-height: 1.65; margin: 0 0 14px; }
+.festival-event__link { color: #8cf7ed; display: inline-block; font-weight: 600; margin-top: 2px; }
+.festival-event__link > span { color: var(--acid); margin-left: 5px; }
 .wip-banner { background: #f1c75b; color: #18211f; font-family: var(--mono); font-size: 0.8rem; font-weight: 500; padding: 12px 20px; text-align: center; }
 .wip-disclaimer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-top: 40px; padding-top: 20px; }
 .bob-ross-heading { border-bottom: 1px solid var(--line); padding-bottom: 30px; }
@@ -71,6 +100,10 @@
   .event-detail__body { gap: 32px; grid-template-columns: 1fr; }
   .monster-mesh__facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .monster-mesh__sections { gap: 28px; grid-template-columns: 1fr; }
+  .festival-timeline__item { gap: 12px; grid-template-columns: 52px minmax(0, 1fr); }
+  .festival-timeline__item:not(:last-child)::before { left: 24px; top: 52px; }
+  .festival-timeline__date { height: 50px; width: 50px; }
+  .festival-timeline__date strong { font-size: 1.2rem; }
   .bob-ross-facts { gap: 18px; grid-template-columns: 1fr; }
   .bob-ross-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bob-ross-artwork figcaption { align-items: flex-start; flex-direction: column; gap: 3px; }
