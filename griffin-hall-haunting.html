@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="Assets/NL_Iso_B.png" />
-    <link rel="stylesheet" href="styles.css?v=hype-trailer" />
+    <link rel="stylesheet" href="styles.css?v=hype-trailer-corner" />
     <link rel="stylesheet" href="calendar.css?v=festival-event-links" />
     <script type="module" src="components/navbar.js"></script>
   </head>
@@ -18,24 +18,25 @@
     <main class="events-page">
       <a class="calendar-back" href="calendar.html">&larr; Fall 2026 calendar</a>
       <article class="event-detail" aria-labelledby="festival-title">
-        <header>
-          <p class="events-eyebrow">Northern Lights Media / Fall 2026</p>
-          <span class="event-status event-status--ready">October event series</span>
-          <h1 id="festival-title">The Griffin Hall Haunting</h1>
-          <p class="event-detail__subtitle">DFX Halloween Festival</p>
+        <header class="festival-page-header">
+          <div class="festival-page-header__copy">
+            <p class="events-eyebrow">Northern Lights Media / Fall 2026</p>
+            <span class="event-status event-status--ready">October event series</span>
+            <h1 id="festival-title">The Griffin Hall Haunting</h1>
+            <p class="event-detail__subtitle">DFX Halloween Festival</p>
+          </div>
+          <section class="festival-trailer festival-trailer--compact" aria-labelledby="festival-trailer-title">
+            <div class="festival-trailer__heading">
+              <p class="festival-trailer__eyebrow">The Griffin Hall Haunting</p>
+              <h2 id="festival-trailer-title">Hype Trailer</h2>
+            </div>
+            <div class="festival-trailer__video">
+              <iframe src="https://www.youtube-nocookie.com/embed/pbNEG7spQzU" title="The Griffin Hall Haunting hype trailer" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </section>
         </header>
 
         <p class="monster-mesh__intro">A series of Halloween-inspired events with Northern Lights Media and the NKU DFX community. Join a game jam, create a digital pumpkin, or share a Halloween-themed DFX project.</p>
-
-        <section class="festival-trailer" aria-labelledby="festival-trailer-title">
-          <div class="festival-trailer__heading">
-            <p class="festival-trailer__eyebrow">The Griffin Hall Haunting</p>
-            <h2 id="festival-trailer-title">Hype Trailer</h2>
-          </div>
-          <div class="festival-trailer__video">
-            <iframe src="https://www.youtube-nocookie.com/embed/pbNEG7spQzU" title="The Griffin Hall Haunting hype trailer" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-        </section>
 
         <ol class="festival-timeline" aria-label="Festival events">
           <li class="festival-timeline__item">
