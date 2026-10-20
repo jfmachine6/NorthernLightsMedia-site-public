@@ -79,6 +79,24 @@
 .festival-event__link > span { color: var(--acid); margin-left: 5px; }
 .wip-banner { background: #f1c75b; color: #18211f; font-family: var(--mono); font-size: 0.8rem; font-weight: 500; padding: 12px 20px; text-align: center; }
 .wip-disclaimer { border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-top: 40px; padding-top: 20px; }
+.onedrive-guide__heading { border-bottom: 1px solid var(--line); padding-bottom: 32px; }
+.onedrive-guide__heading h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
+.onedrive-guide__intro { color: var(--muted); font-size: 1.05rem; line-height: 1.65; margin: 16px 0 0; max-width: 820px; }
+.onedrive-steps { list-style: none; margin: 0; padding: 0; }
+.onedrive-step { align-items: start; border-bottom: 1px solid var(--line); display: grid; gap: clamp(24px, 5vw, 64px); grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.25fr); padding: 36px 0; }
+.onedrive-step__copy { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 14px; }
+.onedrive-step__number { align-items: center; background: rgba(183, 243, 107, 0.12); border: 1px solid rgba(183, 243, 107, 0.35); border-radius: 50%; color: var(--acid); display: flex; font-family: var(--mono); font-size: 0.8rem; height: 40px; justify-content: center; width: 40px; }
+.onedrive-step__copy h2 { align-self: center; font-size: 1.4rem; line-height: 1.25; margin: 0; }
+.onedrive-step__copy p { color: var(--muted); grid-column: 2; line-height: 1.7; margin: 14px 0 0; }
+.onedrive-step__copy strong { color: var(--paper); }
+.onedrive-step__image { margin: 0; min-width: 0; }
+.onedrive-step__image img { background: #fff; border: 1px solid var(--line); border-radius: 4px; display: block; height: auto; width: 100%; }
+.onedrive-step__image figcaption { color: var(--muted); font-family: var(--mono); font-size: 0.72rem; line-height: 1.5; margin-top: 8px; }
+.onedrive-step--last { grid-template-columns: 1fr; }
+.onedrive-guide__help { border-left: 3px solid #64d9ff; margin-top: 36px; padding: 8px 0 8px 20px; }
+.onedrive-guide__help h2 { font-size: 1.25rem; margin: 0 0 8px; }
+.onedrive-guide__help p { color: var(--muted); line-height: 1.65; margin: 0; max-width: 800px; }
+.onedrive-guide a:not(.calendar-back) { color: #64d9ff; text-decoration: underline; text-underline-offset: 3px; }
 .bob-ross-heading { border-bottom: 1px solid var(--line); padding-bottom: 30px; }
 .bob-ross-heading h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
 .bob-ross-intro { color: var(--muted); font-size: 1.1rem; line-height: 1.65; margin: 18px 0 0; max-width: 760px; }
@@ -107,6 +125,7 @@
   .bob-ross-facts { gap: 18px; grid-template-columns: 1fr; }
   .bob-ross-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .bob-ross-artwork figcaption { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .onedrive-step { grid-template-columns: 1fr; }
 }
 @media (max-width: 420px) {
   .bob-ross-gallery { grid-template-columns: 1fr; }
