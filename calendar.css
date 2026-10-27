@@ -60,6 +60,8 @@
 .monster-mesh__coming { background: rgba(100, 217, 255, 0.07); border-left: 3px solid #64d9ff; margin-top: 36px; padding: 22px 24px; }
 .monster-mesh__coming h2 { margin: 0 0 8px; }
 .monster-mesh__coming p { color: var(--muted); line-height: 1.6; margin: 0; }
+.submission-form-link { background: var(--acid); border-radius: 4px; color: var(--ink) !important; display: inline-block; font-weight: 700; margin-top: 8px; padding: 12px 16px; text-decoration: none !important; }
+.submission-form-link:hover, .submission-form-link:focus-visible { background: #64d9ff; }
 .contest-awards { display: grid; gap: 14px; list-style: none; margin: 0; padding: 0; }
 .contest-awards li { border-left: 2px solid var(--acid); display: grid; gap: 3px; padding-left: 12px; }
 .contest-awards strong { color: var(--paper); }
