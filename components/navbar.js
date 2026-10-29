@@ -4,6 +4,9 @@ const navItems = [
   { label: "About", href: `${homePrefix}index.html#about` },
   { label: "Calendar", href: `${homePrefix}calendar.html` },
   { label: "Showcase", href: `${homePrefix}showcase.html` },
+  { label: "Members", href: `${homePrefix}members.html` },
+  { label: "News", href: `${homePrefix}news.html` },
+  { label: "History", href: `${homePrefix}history.html` },
   { label: "3D Pictionary", href: `${homePrefix}Pictionary/index.html` },
 ];
 
@@ -36,9 +39,19 @@ function renderNavbar(container) {
   });
 
   menu.querySelectorAll("a").forEach((link) => {
+    if (new URL(link.href).pathname === window.location.pathname && !link.hash) {
+      link.setAttribute("aria-current", "page");
+    }
     link.addEventListener("click", () => {
       toggle.setAttribute("aria-expanded", "false");
       menu.classList.remove("is-open");
+    });
+    menu.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        toggle.setAttribute("aria-expanded", "false");
+        menu.classList.remove("is-open");
+        toggle.focus();
+      }
     });
   });
 }

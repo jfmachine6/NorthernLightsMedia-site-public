@@ -1,4 +1,4 @@
-.pictionary-body .site-nav { height: 140px; }
+.pictionary-body .site-nav { --nav-menu-top: 140px; height: 140px; }
 .pictionary-body .site-nav__logo { height: 126px; width: 126px; }
 .pictionary-page { margin: 0 auto; max-width: 1180px; padding: 28px clamp(24px, 4vw, 56px) 40px; }
 .pictionary-layout { align-items: start; display: grid; gap: clamp(24px, 4vw, 48px); grid-template-columns: 220px minmax(0, 1fr); }
@@ -35,7 +35,7 @@
 .pictionary-note { margin: 22px 0 0; }
 .pictionary-note code { color: var(--acid); font-family: var(--mono); text-transform: none; }
 @media (max-width: 720px) {
-  .pictionary-body .site-nav { height: 142px; }
+  .pictionary-body .site-nav { --nav-menu-top: 142px; height: 142px; }
   .pictionary-body .site-nav__logo { height: 128px; width: 128px; }
   .pictionary-page { padding-top: 34px; }
   .pictionary-layout { display: block; }
@@ -48,7 +48,7 @@
   .attendance-panel__qr { height: min(36vw, 180px); width: min(36vw, 180px); }
 }
 @media (min-width: 721px) and (max-height: 800px) {
-  .pictionary-body .site-nav { height: 110px; }
+  .pictionary-body .site-nav { --nav-menu-top: 110px; height: 110px; }
   .pictionary-body .site-nav__logo { height: 98px; width: 98px; }
   .pictionary-page { padding-bottom: 18px; padding-top: 18px; }
   .pictionary-layout { gap: 28px; }

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore Northern Lights Media's club history, event recaps, and creative milestones." />
+    <title>History | Northern Lights Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="Assets/NL_Iso_B.png" />
+    <link rel="stylesheet" href="styles.css?v=community" />
+    <link rel="stylesheet" href="community.css" />
+    <script type="module" src="components/navbar.js?v=community"></script>
+    <script type="module" src="components/notion-feed.js"></script>
+  </head>
+  <body>
+    <header id="site-nav"></header>
+    <main class="community-page">
+      <header class="community-heading">
+        <p class="community-eyebrow">Northern Lights Media / Looking back</p>
+        <h1>Our story so far</h1>
+        <p>Creative nights, shared projects, and the moments that bring us together. Explore the NLM archive.</p>
+      </header>
+      <section data-notion-feed="history" aria-label="Club history" aria-busy="true">
+        <p class="feed-status" data-feed-status role="status">Loading club history...</p>
+        <button class="feed-retry" data-feed-retry type="button" hidden>Try again</button>
+        <div data-feed-results></div>
+      </section>
+      <noscript><p>Enable JavaScript to load published club history.</p></noscript>
+    </main>
+  </body>
+</html>
