@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Spin, zoom, and explore 3D models made by the Northern Lights Media community at NKU." />
+    <title>3D Gallery | Northern Lights Media</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="Assets/NL_Iso_B.png" />
+    <link rel="stylesheet" href="styles.css?v=gallery3d" />
+    <link rel="stylesheet" href="community.css" />
+    <link rel="stylesheet" href="model-gallery.css" />
+    <script type="module" src="components/navbar.js?v=gallery3d"></script>
+    <script type="module" src="components/model-gallery.js"></script>
+  </head>
+  <body>
+    <header id="site-nav"></header>
+    <main class="community-page">
+      <header class="community-heading">
+        <p class="community-eyebrow">Northern Lights Media / 3D gallery</p>
+        <h1>3D Gallery</h1>
+        <p>Spin, zoom, and get up close with models from the NLM community. Pick a model to open it in the interactive viewer.</p>
+      </header>
+      <section data-model-gallery aria-label="3D models" aria-busy="true">
+        <p class="feed-status" data-gallery-status role="status">Loading models...</p>
+        <button class="feed-retry" data-gallery-retry type="button" hidden>Try again</button>
+        <ul class="model-grid" data-gallery-results></ul>
+      </section>
+      <noscript><p>Enable JavaScript to explore the 3D models.</p></noscript>
+    </main>
+
+    <dialog class="model-dialog" data-model-dialog aria-labelledby="model-dialog-title">
+      <div class="model-dialog__layout">
+        <div class="model-dialog__stage" data-model-stage>
+          <p class="model-dialog__message" data-model-message role="status"></p>
+        </div>
+        <div class="model-dialog__info">
+          <button class="model-dialog__close" type="button" data-model-close aria-label="Close viewer">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <p class="community-eyebrow" data-model-event></p>
+          <h2 id="model-dialog-title" data-model-title></h2>
+          <p class="model-dialog__creator" data-model-creator></p>
+          <p class="model-dialog__description" data-model-description></p>
+          <dl class="model-dialog__facts" data-model-facts></dl>
+          <ul class="feed-roles" data-model-tags></ul>
+          <div class="model-dialog__actions">
+            <button class="model-dialog__button" type="button" data-model-reset>Reset view</button>
+            <button class="model-dialog__button" type="button" data-model-rotate aria-pressed="true">Auto-rotate</button>
+          </div>
+          <p class="model-dialog__hint">Drag to rotate, scroll or pinch to zoom, and right-drag or two-finger drag to pan. On supported phones, tap <strong>View in your space</strong> to see it in AR.</p>
+          <p class="model-dialog__link"><a data-model-link href="#">Link to this model</a></p>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>

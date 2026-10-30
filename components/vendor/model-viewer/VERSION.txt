@@ -1,0 +1,1 @@
+@google/model-viewer 4.4.0 (dist/model-viewer.min.js), from https://www.npmjs.com/package/@google/model-viewer - Apache-2.0, see LICENSE.

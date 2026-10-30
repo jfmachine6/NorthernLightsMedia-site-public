@@ -1,0 +1,84 @@
+{
+  "models": [
+    {
+      "id": "best-in-show-trophy",
+      "title": "Best in Show Trophy",
+      "description": "The Monster MESH Best in Show trophy, with glowing eyes and an inset gem.",
+      "event": "Monster MESH 2026",
+      "tags": [
+        "3D print",
+        "Trophy"
+      ],
+      "alt": "3D model of the Best in Show Trophy",
+      "src": "models/best-in-show-trophy.glb?v=dba0e07f72",
+      "poster": "models/best-in-show-trophy.webp?v=bf77daefd5",
+      "fileSize": 470836,
+      "triangles": 249997,
+      "dimensions": "9.0 × 10.1 × 7.8 cm"
+    },
+    {
+      "id": "spookiest-creation-trophy",
+      "title": "Spookiest Creation Trophy",
+      "description": "The Monster MESH Spookiest Creation trophy.",
+      "event": "Monster MESH 2026",
+      "tags": [
+        "3D print",
+        "Trophy"
+      ],
+      "alt": "3D model of the Spookiest Creation Trophy",
+      "src": "models/spookiest-creation-trophy.glb?v=59c911e186",
+      "poster": "models/spookiest-creation-trophy.webp?v=ec67bf0ff1",
+      "fileSize": 448696,
+      "triangles": 249999,
+      "dimensions": "9.0 × 9.5 × 6.2 cm"
+    },
+    {
+      "id": "coziest-creation-trophy",
+      "title": "Coziest Creation Trophy",
+      "description": "The Monster MESH Coziest Creation trophy.",
+      "event": "Monster MESH 2026",
+      "tags": [
+        "3D print",
+        "Trophy"
+      ],
+      "alt": "3D model of the Coziest Creation Trophy",
+      "src": "models/coziest-creation-trophy.glb?v=984bf7f59a",
+      "poster": "models/coziest-creation-trophy.webp?v=fa1a0082e9",
+      "fileSize": 443184,
+      "triangles": 250000,
+      "dimensions": "9.0 × 9.0 × 4.6 cm"
+    },
+    {
+      "id": "jack-o-lantern",
+      "title": "Jack-o'-Lantern",
+      "description": "A grinning 3D-printed jack-o'-lantern with a removable lid, made for the Monster MESH Halloween showcase.",
+      "event": "Monster MESH 2026",
+      "tags": [
+        "3D print",
+        "Halloween"
+      ],
+      "alt": "3D model of the Jack-o'-Lantern",
+      "src": "models/jack-o-lantern.glb?v=e527e0da73",
+      "poster": "models/jack-o-lantern.webp?v=9f86142c7d",
+      "fileSize": 486288,
+      "triangles": 249997,
+      "dimensions": "7.4 × 7.4 × 6.8 cm"
+    },
+    {
+      "id": "skull-candle",
+      "title": "Skull Candle",
+      "description": "A skull candle holder sculpted for 3D printing as Halloween decor for the Monster MESH showcase.",
+      "event": "Monster MESH 2026",
+      "tags": [
+        "3D print",
+        "Halloween"
+      ],
+      "alt": "3D model of the Skull Candle",
+      "src": "models/skull-candle.glb?v=bd44ba0930",
+      "poster": "models/skull-candle.webp?v=36f69a2fa1",
+      "fileSize": 437324,
+      "triangles": 249999,
+      "dimensions": "6.0 × 9.6 × 7.6 cm"
+    }
+  ]
+}
